@@ -31,6 +31,15 @@ void BaseSprite::onExit()
     Sprite::onExit();
 }
 
+void BaseSprite::ban_mouse() {
+    _mouseListener->setEnabled(false);
+}
+
+void BaseSprite::resume_mouse() {
+    _mouseListener->setEnabled(true);
+}
+
+
 BaseSprite::BaseSprite()
 {
     BaseSprite::init();
